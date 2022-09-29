@@ -1,17 +1,17 @@
 import React from 'react';
 
-const MovieCard = (props) => {
+const MovieCard = ({movie}) => {
     return(
         <div className='movie'>
             <div>
-                <p>{props.year}</p>
+                <p>{movie.Year}</p>
             </div>
             <div>
-                <img src={props.poster !== 'N/A' ? props.poster : 'https://via.placeholder.com/404'} alt='poster'/>
+                <img src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/404'} alt={movie.Title}/>
             </div>
             <div>
-                <span>{props.type}</span>
-                <h3>{props.title}</h3>
+                <span>{movie.Type}</span>
+                <h3>{movie.Title}</h3>
             </div>
         </div>
     )
